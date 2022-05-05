@@ -1,1 +1,10 @@
-<p>layout works!</p>
+<app-foo (user)="getUser($event)"></app-foo>
+
+<hr/>
+
+<div *ngIf="currentUser">
+  <h4>Current User Info:</h4>
+  <strong>ID: </strong> {{currentUser.id}} <br/>
+  <strong>User: </strong> {{currentUser.name}} <br/>
+  <strong>Email: </strong> {{currentUser.email}}
+</div>

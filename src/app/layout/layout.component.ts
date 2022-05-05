@@ -1,3 +1,4 @@
+import { User } from './../interfaces/user';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  currentUser: User;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getUser(user: User) {
+    this.currentUser = user;
   }
 
 }
